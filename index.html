@@ -3,37 +3,77 @@
 </head>
 <h1>Hell</h1>
 <body>
-  <script type="text/javascript">
-
-			function showTime(){
-				var date = new Date();
-				var h = date.getHours(); // 0 - 23
-				var m = date.getMinutes(); // 0 - 59
-				var s = date.getSeconds(); // 0 - 59
-				var session = "AM";
-				
-				if(h >= 12){
-					h = h - 12;
-					session = "PM";
-				}
-
-				if(h == 0){
-					h = 12;
-				}
+	<div id="container">
 
 
-				h = (h < 10) ? "0" + h : h;
-				m = (m < 10) ? "0" + m : m;
-				s = (s < 10) ? "0" + s : s;
 
-				var time = h + ":" + m + ":" + s + " " + session;
-				document.getElementById("MyClockDisplay").innerText = time;
-				document.getElementById("MyClockDisplay").textContent = time;
+<script type="text/javascript">
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
-				setTimeout(showTime, 1000);
-			}
+<iframe id="mainContent" frameborder="0" width="100%" height="550" src="demo/javascript/1/" __idm_frm__="194"></iframe>
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="text/javascript"></script>
 
-			showTime();
 
-		</script>
+
+
+
+
+
+<script type="text/javascript">
+ ready(function() {
+    
+    // Function called if AdBlock is not detected
+    function adBlockNotDetected() {
+    	document.getElementById('freezeLayer').style.display = 'none';
+    }
+    
+    // Function called if AdBlock is detected
+    function adBlockDetected() {
+        var f = document.getElementById('freezeLayer');
+        f.classList.add('msg');
+        f.innerHTML='<p>Our website is made possible by displaying online advertisements to our visitors.</p><p>Please consider supporting us by disabling your ad blocker.</p>';
+    	document.getElementById('container').innerHTML = '';
+    }
+    
+    // Recommended audit because AdBlock lock the file 'blockadblock.js' 
+    // If the file is not called, the variable does not exist 'blockAdBlock'
+    // This means that AdBlock is present
+    if(typeof blockAdBlock === 'undefined') {
+    	adBlockDetected();
+    } else {
+    	blockAdBlock.onDetected(adBlockDetected);
+    	blockAdBlock.onNotDetected(adBlockNotDetected);
+    	// and|or
+    	blockAdBlock.on(true, adBlockDetected);
+    	blockAdBlock.on(false, adBlockNotDetected);
+    	// and|or
+    	blockAdBlock.on(true, adBlockDetected).onNotDetected(adBlockNotDetected);
+    }
+}, false);
+ 
+</script>
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5be92d7970ff5a5a3a71ba56/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-93486751-1" type="text/javascript"></script>
+<script type="text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-93486751-1');
+</script>
+</div>
 </body>  
